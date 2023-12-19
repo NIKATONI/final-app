@@ -36,6 +36,7 @@ export default function Navbar() {
         {links.map((link) => (
           <Link href={link.url} className={styles.links}>{link.title}</Link>
         ))}
+        <button ></button>
       </div>
     </div>
   );

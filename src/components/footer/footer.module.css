@@ -1,6 +1,4 @@
-.container
-{
-
+.container {
   bottom: 0;
   height: 50px;
   display: flex;
@@ -9,19 +7,15 @@
   font-size: 14px;
   padding: 1%;
   box-shadow: 0px -2px 20px black;
-
+  border-radius: 10px 10px 0 0;
 }
-.socialNewtworks
-{
 
+.socialNewtworks {
   display: flex;
   align-items: center;
   gap: 10px;
-
 }
-.icon
-{
 
+.icon {
   cursor: pointer;
-
 }
