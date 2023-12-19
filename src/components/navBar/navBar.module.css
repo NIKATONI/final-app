@@ -30,3 +30,13 @@
   cursor: pointer;
   border-radius: 3px;
 }
+
+.searchBar {
+  width: 300px;
+  height: 35px;
+  border-radius: 100px;
+  background-color: transparent;
+  padding: 1%;
+  border: 1px solid white;
+  outline: none;
+}
