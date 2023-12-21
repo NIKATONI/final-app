@@ -13,7 +13,7 @@ export default function Navbar() {
     {
       id: 2,
       title: "Shop",
-      url: "/portFolio"
+      url: "/shop"
     },
     {
       id: 3,
