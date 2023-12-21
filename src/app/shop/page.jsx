@@ -22,9 +22,9 @@ export default async function Shop() {
     const data = await getData();
 
     return (
-        <div>
+        <div className={styles.container}>
             {data.map((item) => (
-                <Link href={`/shop/${item.id}`} className={styles.container}>
+                <Link href={`/shop/${item.id}`} className={styles.card}>
                     <div className={styles.imageContainer}>
                         <Image
                             src={item.images[0]}
