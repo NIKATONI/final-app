@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './footer.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import Button from '@/components/button/Button';
 
 export default function Footer() {
 
@@ -32,6 +33,9 @@ export default function Footer() {
 
     <div className={styles.container}>
       <div>@all rights reserved</div>
+      <div>
+        contact us: <input type="email" placeholder='enter your email' className={styles.contacts} /> <input type="text" placeholder='enter message' className={styles.contacts} /> <Button type="submit" url={""} title={"Submit"} style={styles.submitButton} />
+      </div>
       <div className={styles.socialNewtworks}>
         {socials.map((item) => (
 
