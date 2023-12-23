@@ -33,11 +33,6 @@ export default function Navbar() {
         Shop
       </Link>
       <div className={styles.links}>
-        <input 
-        type="text" 
-        name="searchBar" 
-        id="searchBar" 
-        placeholder={"What are you looking for...?"} className={styles.searchBar} />
         {links.map((link) => (
           <Link href={link.url} className={styles.links}>{link.title}</Link>
         ))}
