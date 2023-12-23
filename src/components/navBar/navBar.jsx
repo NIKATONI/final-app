@@ -19,11 +19,6 @@ export default function Navbar() {
       id: 3,
       title: "About",
       url: "/about"
-    },
-    {
-      id: 4,
-      title: "Contact",
-      url: "/contact"
     }
   ]
 
