@@ -16,3 +16,23 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.theme {
+
+  transition: 1s;
+
+}
+
+.dark {
+
+  background-color: #111;
+  color: #bbb;
+
+}
+
+.light {
+
+  background-color: white;
+  color: #111;
+
+}

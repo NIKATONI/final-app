@@ -1,18 +1,71 @@
 .container {
-    height: fit-content;
     width: 100%;
-    padding: 5%;
+    height: 100svh;
 }
 
 .shopItemContainer {
-    width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-top: 75px;
 }
 
-.img {
-    object-fit: cover;
+.backButton {
+    width: 75px;
+    height: 50px;
+    border-radius: 0 100px 100px 0;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.item {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.imgButton {
+    position: absolute;
+    z-index: 10;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 100px;
+    top: 50%;
+    padding: 5px;
+    color: white;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.buySection {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.buyButton {
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 2rem;
 }
