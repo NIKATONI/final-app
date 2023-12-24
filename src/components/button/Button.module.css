@@ -4,3 +4,8 @@
     cursor: pointer;
     background-color: transparent;
 }
+
+.button:hover {
+    color: var(--backColor);
+    background-color: var(--invertedColor);
+}

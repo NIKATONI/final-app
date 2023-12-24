@@ -6,7 +6,8 @@ import DarkModeToggle from "../darkModeToggle/DarkModeToggle"
 
 export default function Navbar() {
 
-  const [burger, setBurger] = useState(true);
+  const [burgerClass, setBurgerClass] = useState(styles.burger);
+  const [navClass, setNavClass] = useState(styles.links);
 
   const links = [
     {
@@ -26,22 +27,32 @@ export default function Navbar() {
     }
   ]
 
+  const HandleBurger = () => {
+    burgerClass == styles.burger ? setBurgerClass(styles.burgerActiv) : setBurgerClass(styles.burger);
+    if(burgerClass == styles.burger) {
+       setNavClass(styles.nav);
+    }
+    else
+    {
+      
+      setNavClass(styles.links);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
         Shop
       </Link>
-      { burger && (
-        <div className={styles.burger}>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-        </div>
-      )}
-      <div className={styles.links}>
-        <DarkModeToggle/>
+      <div className={burgerClass} onClick={HandleBurger}>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+      </div>
+      <div className={navClass}>
+        <DarkModeToggle />
         {links.map((link) => (
-          <Link href={link.url} className={styles.links}>{link.title}</Link>
+          <Link href={link.url} onClick={HandleBurger}>{link.title}</Link>
         ))}
       </div>
     </div>
