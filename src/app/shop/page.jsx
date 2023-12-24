@@ -27,6 +27,8 @@ export default function Shop() {
             });
     }, [])
 
+    console.log(data);
+
     return (
         <div className={styles.container}>
             <input
@@ -37,9 +39,9 @@ export default function Shop() {
                 className={styles.searchBar}
                 onChange={(e) => { setSearch(e.target.value) }} />
             <div className={styles.itemHolder}>
-                {data.filter((item) => {
+                {data.filter((i) => {
                     return search.toLowerCase() === "" ?
-                        item : item.title.toLowerCase().includes(search);
+                        i : i.title.toLowerCase().includes(search);
                 }).map((item) => (
                     <Link href={`/shop/${item.id}`} className={styles.card}>
                         <div className={styles.imageContainer}>

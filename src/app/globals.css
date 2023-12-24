@@ -9,7 +9,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background: linear-gradient(45deg, rgb(15, 15, 190), black);
+  background: linear-gradient(45deg, rgb(28, 28, 255), black);
 }
 
 a {

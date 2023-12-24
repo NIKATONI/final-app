@@ -39,6 +39,7 @@ const shopPost = ({ params }) => {
     setNextButton(true);
   };
 
+  console.log("2", params);
   return (
     <div className={styles.container}>
       <Button title={"Back"} url={"/shop"} style={styles.backButton} width={200} />
