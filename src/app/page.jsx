@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import Button from '@/components/button/Button'
 import Shop from "../../public/shop.png"
 
 // https://api.escuelajs.co/api/v1/products

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1%;
+  padding: 2%;
   background-color: transparent;
 }
 
@@ -13,6 +13,21 @@
   align-items: center;
   justify-content: space-around;
   text-decoration: none;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 101%;
+  top: 0;
+  right: 0;
+  background-color: var(--backColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  gap: 20px;
 }
 
 .logo {
@@ -30,14 +45,56 @@
   border-radius: 3px;
 }
 
-.burder {
-  width: 100px;
-  height: 100px;
+.burger {
+  width: 50px;
+  height: 50px;
+  display: none;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 2;
 }
 
 .line {
   width: 100%;
-  height: 1px;
+  height: 5px;
+  display: none;
   background-color: var(--invertedColor);
   border-radius: 100px;
+}
+
+.burgerActiv {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.burgerActiv .line:nth-child(1) {
+  transform: rotateZ(45deg) translate(3px, -8px);
+  transform-origin: 0;
+}
+
+.burgerActiv .line:nth-child(2) {
+  display: none;
+}
+
+.burgerActiv .line:nth-child(3) {
+  transform: rotateZ(-45deg) translate(0, 10px);
+  transform-origin: 0;
+}
+
+@media (max-width: 350px) {
+  .burger {
+    display: flex;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .links {
+    display: none;
+  }
 }
