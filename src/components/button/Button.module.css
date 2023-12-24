@@ -1,6 +1,6 @@
 .button {
-    color: white;
-    border: 1px solid white;
+    color: var(--invertedColor);
+    border: 1px solid var(--invertedColor);
     cursor: pointer;
     background-color: transparent;
 }

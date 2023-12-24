@@ -71,7 +71,7 @@ const shopPost = ({ params }) => {
             <p>{shopItem.description}</p>
             <div className={styles.buySection}>
               <h2>{shopItem.price}$</h2>
-              <button className={styles.buyButton}>Buy</button>
+              <Button title={"Buy"} url={""} style={styles.buyButton} />
             </div>
           </div>
         </div>)}

@@ -1,8 +1,13 @@
+:root {
+  --backColor: white;
+  --invertedColor: rgb(10, 10, 10);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: rgb(200, 200, 200);
+  transition: 1s;
 }
 
 html,
@@ -17,22 +22,16 @@ a {
   text-decoration: none;
 }
 
-.theme {
-
-  transition: 1s;
-
-}
-
 .dark {
-
-  background-color: #111;
-  color: #bbb;
-
+  background-color: rgb(10, 10, 10);
+  color: white;
+  --backColor: rgb(10, 10, 10);
+  --invertedColor: white;
 }
 
 .light {
-
   background-color: white;
-  color: #111;
-
+  color: rgb(50, 50, 50);
+  --backColor: white;
+  --invertedColor: rgb(10, 10, 10);
 }

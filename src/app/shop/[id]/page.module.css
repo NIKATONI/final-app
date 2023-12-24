@@ -64,8 +64,6 @@
 .buyButton {
     width: 100px;
     height: 50px;
-    color: white;
     background-color: transparent;
-    border: 1px solid white;
     font-size: 2rem;
 }

@@ -6,7 +6,7 @@
   align-items: center;
   font-size: 14px;
   padding: 1%;
-  box-shadow: 0px -2px 20px black;
+  box-shadow: 0px -2px 20px var(--invertedColor);
   border-radius: 10px 10px 0 0;
 }
 
@@ -16,9 +16,9 @@
   border-radius: 100px;
   background-color: transparent;
   padding: 1%;
-  border: 1px solid white;
+  border: 1px solid var(--invertedColor);
   outline: none;
-  color: white;
+  color: var(--invertedColor);
 }
 
 .submitButton {
