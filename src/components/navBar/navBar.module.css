@@ -29,3 +29,15 @@
   cursor: pointer;
   border-radius: 3px;
 }
+
+.burder {
+  width: 100px;
+  height: 100px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--invertedColor);
+  border-radius: 100px;
+}

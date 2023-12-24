@@ -56,3 +56,15 @@
 .desc {
     font-size: 18px;
 }
+
+@media (max-width: 300px) {
+    .searchBar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 250px) {
+    .card {
+        width: 100%;
+    }
+}

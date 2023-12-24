@@ -1,11 +1,12 @@
 .container {
+    min-height: 100svh;
     height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     padding: 2%;
-    gap: 25px;
+    gap: 10px;
 }
 
 .item {
@@ -45,5 +46,8 @@
     }
     .item:nth-child(1) {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

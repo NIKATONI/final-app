@@ -13,7 +13,7 @@ export default function DarkModeToggle() {
       <div className={styles.icon}>🔆</div>
       <div
         className={styles.ball}
-        style={mode === "dark" ? { left: "2px" } : { right: "2px" }}
+        style={mode === "dark" ? { left: "3px" } : { right: "3px" }}
       />
     </div>
   );
