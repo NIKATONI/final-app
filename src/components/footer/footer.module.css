@@ -1,6 +1,6 @@
 .container {
   bottom: 0;
-  height: 50px;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,6 +30,7 @@
 .socialNewtworks {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -43,4 +44,10 @@
 
 .link:hover {
   transform: translateY(-10px);
+}
+
+@media (max-width: 300px) {
+  .contacts {
+    width: 100%;
+  }
 }

@@ -1,9 +1,11 @@
 .container {
-    height: 600px;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 2%;
+    gap: 25px;
 }
 
 .item {
@@ -35,4 +37,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 500px) {
+    .title {
+        width: 100%;
+    }
+    .item:nth-child(1) {
+        width: 100%;
+    }
 }

@@ -2,7 +2,7 @@
 
     width: 42px;
     height: 24px;
-    border: 1.5px solid #53c28b70;
+    border: 1.5px solid var(--invertedColor);
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -22,7 +22,8 @@
 
     width: 15px;
     height: 15px;
-    background-color: #53c28b;
+    border: 1px solid white;
+    background-color: rgb(10, 10, 10);
     border-radius: 50%;
     position: absolute;
 
