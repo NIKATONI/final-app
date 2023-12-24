@@ -36,3 +36,11 @@
 .icon {
   cursor: pointer;
 }
+
+.link {
+  transition: 0.5s;
+}
+
+.link:hover {
+  transform: translateY(-10px);
+}

@@ -39,7 +39,7 @@ export default function Footer() {
       <div className={styles.socialNewtworks}>
         {socials.map((item) => (
 
-          <Link href={item.url} target="#">
+          <Link href={item.url} target="#" className={styles.link}>
             <Image className={styles.icon} src={item.src} width={25} height={25} alt={item.alt} />
           </Link>
 
