@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
-        <div className={styles.title}>ONLINE SHOPPING</div>
+        <h1 className={styles.title}>ONLINE SHOPPING</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur harum molestiae atque quisquam odit, ad assumenda id, quae eius aperiam, qui saepe! Hic animi consectetur, expedita nihil corporis ducimus labore?</p>
         <a href={"/about"} className={styles.seeMore}>SEE MORE</a>
       </div>
