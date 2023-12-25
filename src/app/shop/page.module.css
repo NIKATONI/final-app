@@ -7,16 +7,32 @@
     flex-direction: column;
 }
 
-.searchBar {
-    width: 300px;
-    height: 35px;
-    border-radius: 100px 100px 50px 50px;
+.inputF {
     background-color: transparent;
     padding: 1%;
     border: 1px solid var(--invertedColor);
     color: var(--invertedColor);
     box-shadow: 0 0 10px var(--invertedColor);
     outline: none;
+}
+
+.searchBar {
+    width: 300px;
+    height: 35px;
+    border-radius: 100px 100px 50px 50px;
+    margin-bottom: 10px;
+}
+
+.fromPrice {
+    width: 50px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.toPrice {
+    width: 50px;
+    height: 25px;
+    margin-right: 10px;
 }
 
 .itemHolder {
