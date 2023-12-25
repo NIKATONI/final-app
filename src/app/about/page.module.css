@@ -19,17 +19,20 @@
 
 .crew {
     width: 100%;
-    min-height: 300px;
     height: fit-content;
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 5%;
+    box-shadow: 0 0 10px var(--invertedColor);
 }
 
 .card {
     width: 200px;
-    height: 275px;
+    height: 350px;
     border: 1px solid white;
     border-radius: 50px;
     background-color: transparent;
@@ -37,8 +40,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     gap: 5%;
     padding: 1%;
+    flex: 1;
+    box-shadow: 5px 5px 10px var(--invertedColor);
 }
 
 .name {
@@ -46,5 +52,9 @@
 }
 
 .about {
+    font-size: 10px;
+}
+
+.email {
     font-size: 10px;
 }
