@@ -1,16 +1,16 @@
 .container {
-    width: 100%;
     min-height: 100svh;
     height: fit-content;
 }
 
 .shopItemContainer {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 75px;
+    padding: 2%;
+    gap: 20%;
 }
 
 .backButton {
@@ -24,12 +24,11 @@
 }
 
 .item {
-    width: 50%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex: 1;
 }
 
 .imageContainer {
