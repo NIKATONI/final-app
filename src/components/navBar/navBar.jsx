@@ -32,12 +32,12 @@ export default function Navbar() {
     if(burgerClass == styles.burger) {
        setNavClass(styles.nav);
     }
-    else
-    {
-      
-      setNavClass(styles.links);
-    }
   };
+
+  const HandleLinks = () => {
+    setBurgerClass(styles.burger);
+    setNavClass(styles.links);
+  }
 
   return (
     <div className={styles.container}>
@@ -52,7 +52,7 @@ export default function Navbar() {
       <div className={navClass}>
         <DarkModeToggle />
         {links.map((link) => (
-          <Link href={link.url} onClick={HandleBurger}>{link.title}</Link>
+          <Link href={link.url} onClick={HandleLinks}>{link.title}</Link>
         ))}
       </div>
     </div>
