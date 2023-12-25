@@ -27,8 +27,6 @@ export default function Shop() {
             });
     }, [])
 
-    console.log(data);
-
     return (
         <div className={styles.container}>
             <input

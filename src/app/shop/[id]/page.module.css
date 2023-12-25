@@ -31,6 +31,11 @@
     flex: 1;
 }
 
+.image {
+    object-fit: cover;
+    box-shadow: 0 0 10px var(--invertedColor);
+}
+
 .imageContainer {
     position: relative;
 }
