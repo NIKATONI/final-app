@@ -52,7 +52,8 @@ const shopPost = ({ params }) => {
                 src={shopItem.images[imgCounter]}
                 alt="productPhoto"
                 width={350}
-                height={350} />
+                height={350} 
+                className={styles.image}/>
               {prevButton && (<button
                 onClick={() => { handlePrevImage() }}
                 className={`${styles.prev} ${styles.imgButton}`}
