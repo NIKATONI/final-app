@@ -2,26 +2,25 @@ import React from 'react'
 import styles from "./page.module.css"
 import user from "../../../public/User.png"
 import Image from 'next/image'
+import Link from 'next/link'
 
-export default function About() {
+const getData = async () => {
 
-  const crew = [
-    {
-      photo: user,
-      name: "someone",
-      about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti enim autem alias earum eligendi harum labore, quibusdam dicta, possimus voluptatum necessitatibus sapiente! Cum reprehenderit doloribus vitae cupiditate at veritatis voluptatum."
-    },
-    {
-      photo: user,
-      name: "someone",
-      about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti enim autem alias earum eligendi harum labore, quibusdam dicta, possimus voluptatum necessitatibus sapiente! Cum reprehenderit doloribus vitae cupiditate at veritatis voluptatum."
-    },
-    {
-      photo: user,
-      name: "someone",
-      about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti enim autem alias earum eligendi harum labore, quibusdam dicta, possimus voluptatum necessitatibus sapiente! Cum reprehenderit doloribus vitae cupiditate at veritatis voluptatum."
-    }
-  ]
+  const res = await fetch("https://jsonplaceholder.typicode.com/users", { cache: "force-cache" });
+
+  if (!res.ok) {
+
+    throw new Error("There is no data");
+
+  }
+
+  return res.json();
+
+}
+
+export default async function About() {
+
+  const users = await getData();
 
   return (
     <div className={styles.container}>
@@ -53,15 +52,20 @@ export default function About() {
           distinctio earum sequi aperiam. Amet, quos.</p>
       </div>
       <div className={styles.crew}>
-        {crew.map((item) => (
+        {users.map((item) => (
           <div className={styles.card}>
             <Image
-              src={item.photo}
+              src={user}
               alt="person"
               width={50}
               height={50} />
             <h1 className={styles.name}>{item.name}</h1>
-            <p className={styles.about}>{item.about}</p>
+            <p className={styles.about}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero enim iure iusto ullam dolor. Accusamus quibusdam unde hic sequi laudantium obcaecati, delectus odit, error officia vel quis id? Quaerat, repellat.</p>
+            <div>
+              <p className={styles.email}>phone:{item.phone}</p>
+              <p className={styles.email}>email:{item.email}</p>
+              <p className={styles.email}>web:<Link href={item.website} target={"blank"}>{item.website}</Link></p>
+            </div>
           </div>
         ))}
       </div>
