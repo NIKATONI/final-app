@@ -10,7 +10,6 @@ export default function Shop() {
     const [search, setSearch] = useState("");
     const [fromPrice, setFromPrice] = useState(0);
     const [toPrice, setToPrice] = useState(0);
-    // aaa
 
     useEffect(() => {
         fetch("https://api.escuelajs.co/api/v1/products", { cache: "force-cache" })
