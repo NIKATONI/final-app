@@ -1,0 +1,76 @@
+.container {
+    min-height: 100svh;
+    height: fit-content;
+}
+
+.shopItemContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 75px;
+    padding: 2%;
+    gap: 20%;
+}
+
+.inputF {
+    background-color: transparent;
+    padding: 1%;
+    border: 1px solid var(--invertedColor);
+    color: var(--invertedColor);
+    box-shadow: 0 0 10px var(--invertedColor);
+    outline: none;
+}
+
+.productDesc {
+    width: 250px;
+    height: 250px;
+}
+
+.backButton {
+    width: 75px;
+    height: 50px;
+    border-radius: 0 100px 100px 0;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+
+.uploadFile {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 0 0 10px var(--invertedColor);
+}
+
+.uploadFileInpt {
+    display: none;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.priceSection {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.priceButton {
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    font-size: 1rem;
+}
