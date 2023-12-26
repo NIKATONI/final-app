@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import styles from "./page.module.css"
 import Image from 'next/image';
+import Plus from "../../../public/Plus.png";
 
 export default function Shop() {
 
@@ -24,6 +25,8 @@ export default function Shop() {
             });
     }, [])
 
+
+
     return (
         <div className={styles.container}>
             <input
@@ -33,6 +36,9 @@ export default function Shop() {
                 placeholder={"What are you looking for...?"}
                 className={`${styles.searchBar} ${styles.inputF}`}
                 onChange={(e) => { setSearch(e.target.value) }} />
+            <Link href={"/productCreation"} className={styles.addProduct}>
+                <Image src={Plus} className={styles.plusImage} />
+            </Link>
             <div>
                 <input
                     type="text"
@@ -50,6 +56,7 @@ export default function Shop() {
                     className={`${styles.toPrice} ${styles.inputF}`}
                     onChange={(e) => { setToPrice(e.target.value) }} />
             </div>
+
             <div className={styles.itemHolder}>
                 {data.filter((i) => {
                     return search.toLowerCase() === "" ?
