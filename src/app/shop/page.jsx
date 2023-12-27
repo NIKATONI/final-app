@@ -13,7 +13,7 @@ export default function Shop() {
     const [toPrice, setToPrice] = useState(0);
 
     useEffect(() => {
-        fetch("https://api.escuelajs.co/api/v1/products", { cache: "force-cache" })
+        fetch("https://fakestoreapi.com/products", { cache: "force-cache" })
             .then((response) => response.json())
             .then((json) => {
                 setData(json);
@@ -63,7 +63,7 @@ export default function Shop() {
                     <Link href={`/shop/${item.id}`} className={styles.card}>
                         <div className={styles.imageContainer}>
                             <Image
-                                src={item.images[0]}
+                                src={item.image}
                                 alt="Blog Image"
                                 width={400}
                                 height={200}

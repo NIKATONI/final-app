@@ -7,26 +7,32 @@ import NoImage from "../../../public/NoImage.jpg"
 
 export default function ProdcutCreate() {
 
-  const [image, setImage] = useState("");
-  const [name, setName] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [title, setName] = useState("");
   const [desc, setDesc] = useState("");
   const [price, setPrice] = useState("");
+  const myPosts = [];
 
   const handleSubmit = () => {
-    fetch("https://api.escuelajs.co/api/v1/products", {
+    fetch("https://fakestoreapi.com/products", {
       method: "POST",
       body: JSON.stringify({
-        name,
-        body: desc,
-        price,
+        title: title,
+        price: price,
+        description: desc,
+        category: [0, "a", imageUrl, "", ""],
+        images: imageUrl,
+        rating: [0, 0],
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
       .then((response) => response.json())
-      .then((json) => { console.log(json); });
+      .then((json) => { myPosts.push(json) });
   };
+
+  console.log(myPosts);
 
   return (
     <div className={styles.container}>
@@ -35,17 +41,16 @@ export default function ProdcutCreate() {
         <div className={styles.item}>
           <div className={styles.imageContainer}>
             <div className={styles.uploadFile}>
-              <input type="file" id='file' className={styles.uploadFileInpt} onChange={(e) => { setImage(e) }} />
-              <label htmlFor='file'>Upload File</label>
+              <input type="url" id='url' className={styles.uploadFileInpt} onChange={(e) => { setImageUrl(e.target.value) }} />
             </div>
           </div>
         </div>
         <div className={styles.item}>
-          <input type="text" placeholder={"product name:"} onChange={(e) => { setName(e) }} className={`${styles.productName} ${styles.inputF}`} />
-          <textarea type="text" placeholder={"product description:"} onChange={(e) => { setDesc(e) }} className={`${styles.productDesc} ${styles.inputF}`}></textarea>
+          <input type="text" placeholder={"product name:"} onChange={(e) => { setName(e.target.value) }} className={styles.productName} />
+          <textarea type="text" placeholder={"product description:"} onChange={(e) => { setDesc(e.target.value) }} className={styles.productDesc}></textarea>
           <div className={styles.priceSection}>
-            <input type="text" placeholder={"product price:"} onChange={(e) => { setPrice(e) }} className={`${styles.productName} ${styles.inputF}`} />
-            <Button title={"Submit"} typ={"submit"} url={""} style={styles.priceButton} onClick={() => { handleSubmit() }} />
+            <input type="text" placeholder={"product price:"} onChange={(e) => { setPrice(e.target.value) }} className={styles.productName} />
+            <Button title={"Submit"} typ={"submit"} url={""} style={styles.priceButton} click={() => { handleSubmit() }} />
           </div>
         </div>
       </div>
