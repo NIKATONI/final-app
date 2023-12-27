@@ -13,7 +13,7 @@ export default function Shop() {
     const [toPrice, setToPrice] = useState(0);
 
     useEffect(() => {
-        fetch("https://api.escuelajs.co/api/v1/products", { cache: "force-cache" })
+        fetch("https://fakestoreapi.com/products", { cache: "force-cache" })
             .then((response) => response.json())
             .then((json) => {
                 setData(json);

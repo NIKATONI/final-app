@@ -13,15 +13,6 @@
     gap: 20%;
 }
 
-.inputF {
-    background-color: transparent;
-    padding: 1%;
-    border: 1px solid var(--invertedColor);
-    color: var(--invertedColor);
-    box-shadow: 0 0 10px var(--invertedColor);
-    outline: none;
-}
-
 .productDesc {
     width: 250px;
     height: 250px;
@@ -40,20 +31,6 @@
     flex-direction: column;
     flex: 1;
     gap: 20px;
-}
-
-.uploadFile {
-    width: 350px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    box-shadow: 0 0 10px var(--invertedColor);
-}
-
-.uploadFileInpt {
-    display: none;
 }
 
 .imageContainer {
