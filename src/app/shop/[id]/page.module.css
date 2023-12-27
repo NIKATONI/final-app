@@ -33,30 +33,11 @@
 
 .image {
     object-fit: cover;
-    box-shadow: 0 0 10px var(--invertedColor);
+    filter: drop-shadow(0 0 10px var(--invertedColor));
 }
 
 .imageContainer {
     position: relative;
-}
-
-.imgButton {
-    position: absolute;
-    z-index: 10;
-    background-color: transparent;
-    border: 1px solid white;
-    border-radius: 100px;
-    top: 50%;
-    padding: 5px;
-    color: white;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
 }
 
 .buySection {

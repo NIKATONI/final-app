@@ -8,7 +8,8 @@ const nextConfig = {
       "placeimg.com",
       "www.instagram.com",
       "imgur.com",
-      "www.ikea.com"],
+      "www.ikea.com",
+      "fakestoreapi.com"],
   },
 }
 

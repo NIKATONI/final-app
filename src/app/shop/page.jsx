@@ -63,7 +63,7 @@ export default function Shop() {
                     <Link href={`/shop/${item.id}`} className={styles.card}>
                         <div className={styles.imageContainer}>
                             <Image
-                                src={item.images[0]}
+                                src={item.image}
                                 alt="Blog Image"
                                 width={400}
                                 height={200}

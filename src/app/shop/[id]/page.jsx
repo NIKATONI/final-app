@@ -8,36 +8,15 @@ const shopPost = ({ params }) => {
 
   const [shopItem, setShopItem] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [imgCounter, setImgCounter] = useState(0);
-  const [nextButton, setNextButton] = useState(true);
-  const [prevButton, setPrevButton] = useState(true);
 
   useEffect(() => {
-    fetch(`https://api.escuelajs.co/api/v1/products/${params.id}`)
+    fetch(`https://fakestoreapi.com/products/${params.id}`)
       .then((response) => response.json())
       .then((json) => {
         setShopItem(json);
         setLoading(false);
       })
   }, [])
-
-  const handleNextImage = () => {
-    if (imgCounter == 2) {
-      setNextButton(false);
-      return;
-    }
-    setImgCounter((counter) => counter + 1);
-    setPrevButton(true);
-  };
-
-  const handlePrevImage = () => {
-    if (imgCounter == 0) {
-      setPrevButton(false);
-      return;
-    }
-    setImgCounter(imgCounter - 1);
-    setNextButton(true);
-  };
 
   console.log("2", params);
   return (
@@ -49,22 +28,11 @@ const shopPost = ({ params }) => {
           <div className={styles.item}>
             <div className={styles.imageContainer}>
               <Image
-                src={shopItem.images[imgCounter]}
+                src={shopItem.image}
                 alt="productPhoto"
                 width={350}
                 height={350}
                 className={styles.image} />
-              {prevButton && (<button
-                onClick={() => { handlePrevImage() }}
-                className={`${styles.prev} ${styles.imgButton}`}
-              >prev</button>)}
-
-              {nextButton && (
-                <button
-                  onClick={() => { handleNextImage() }}
-                  className={`${styles.next} ${styles.imgButton}`}
-                >next</button>
-              )}
             </div>
           </div>
           <div className={styles.item}>
