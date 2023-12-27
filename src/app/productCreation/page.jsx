@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react'
 import styles from "./page.module.css"
-import Image from 'next/image'
 import Button from '@/components/button/Button';
-import NoImage from "../../../public/NoImage.jpg"
 
 export default function ProdcutCreate() {
 
@@ -11,7 +9,7 @@ export default function ProdcutCreate() {
   const [title, setName] = useState("");
   const [desc, setDesc] = useState("");
   const [price, setPrice] = useState("");
-  const myPosts = [];
+  const [myPosts, setMyPosts] = useState("");
 
   const handleSubmit = () => {
     fetch("https://fakestoreapi.com/products", {
@@ -29,10 +27,9 @@ export default function ProdcutCreate() {
       },
     })
       .then((response) => response.json())
-      .then((json) => { myPosts.push(json) });
+      .then((json) => { setMyPosts(json) });
+      
   };
-
-  console.log(myPosts);
 
   return (
     <div className={styles.container}>
@@ -50,7 +47,7 @@ export default function ProdcutCreate() {
           <textarea type="text" placeholder={"product description:"} onChange={(e) => { setDesc(e.target.value) }} className={styles.productDesc}></textarea>
           <div className={styles.priceSection}>
             <input type="text" placeholder={"product price:"} onChange={(e) => { setPrice(e.target.value) }} className={styles.productName} />
-            <Button title={"Submit"} typ={"submit"} url={""} style={styles.priceButton} click={() => { handleSubmit() }} />
+            <Button title={"Submit"} typ={""} url={""} style={styles.priceButton} click={() => { handleSubmit() }} />
           </div>
         </div>
       </div>
