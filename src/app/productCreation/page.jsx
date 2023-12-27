@@ -11,13 +11,14 @@ export default function ProdcutCreate() {
   const [title, setName] = useState("");
   const [desc, setDesc] = useState("");
   const [price, setPrice] = useState("");
+  const myPosts = [];
 
   const handleSubmit = () => {
     fetch("https://fakestoreapi.com/products", {
       method: "POST",
       body: JSON.stringify({
         title: title,
-        price:  price,
+        price: price,
         description: desc,
         category: [0, "a", imageUrl, "", ""],
         images: imageUrl,
@@ -28,8 +29,10 @@ export default function ProdcutCreate() {
       },
     })
       .then((response) => response.json())
-      .then((json) => { console.log(json); });
+      .then((json) => { myPosts.push(json) });
   };
+
+  console.log(myPosts);
 
   return (
     <div className={styles.container}>
